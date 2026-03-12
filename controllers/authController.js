@@ -10,7 +10,7 @@ const validateUser = async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (isMatch) {
       req.session.user = user;
-      res.redirect("/https://frontend-app-kohl-iota.vercel.app/store");
+      res.redirect("/store");
     } else {
       res.redirect("/auth/login");
     }
