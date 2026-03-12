@@ -38,7 +38,7 @@ app.use((req, res, next) => {
 app.use("/auth", authRouter);
 app.use("/store", storeRouter);
 app.use("/", authenticateAdmin, homeRouter);
-app.use("/products", authenticateAdmin, productRouter);
+app.use("/products", productRouter);
 app.use("/users", authenticateAdmin, userRouter);
 
 const startServer = async () => {
