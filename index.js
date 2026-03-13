@@ -12,7 +12,10 @@ import authRouter from "./routes/authRoute.js";
 import userRouter from "./routes/userRoute.js";
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin:"https://frontend-app-kohl-iota.vercel.app"
+  }));
 dotenv.config();
 app.use(expressLayouts);
 app.set("view engine", "ejs");
