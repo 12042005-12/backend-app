@@ -30,6 +30,7 @@ app.use(
     secret: "secretkey",
     resave: false,
     saveUninitialized: false,
+    cookie:{secure:false}
   }),
 );
 
